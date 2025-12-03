@@ -1,4 +1,4 @@
-// Theme Toggle Functionality
+// Theme Selector Functionality
 
 // Get theme from localStorage or default to 'light'
 function getTheme() {
@@ -9,13 +9,19 @@ function getTheme() {
 function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
+    updateActiveButton(theme);
 }
 
-// Toggle theme
-function toggleTheme() {
-    const currentTheme = getTheme();
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
+// Update active button state
+function updateActiveButton(theme) {
+    const buttons = document.querySelectorAll('.theme-btn');
+    buttons.forEach(btn => {
+        if (btn.getAttribute('data-theme') === theme) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
 }
 
 // Initialize theme on page load
@@ -23,11 +29,14 @@ function initTheme() {
     const savedTheme = getTheme();
     setTheme(savedTheme);
     
-    // Add event listener to theme toggle button
-    const themeToggleBtn = document.querySelector('.theme-toggle-btn');
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', toggleTheme);
-    }
+    // Add event listeners to all theme buttons
+    const themeButtons = document.querySelectorAll('.theme-btn');
+    themeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const selectedTheme = btn.getAttribute('data-theme');
+            setTheme(selectedTheme);
+        });
+    });
 }
 
 // Run on DOM content loaded

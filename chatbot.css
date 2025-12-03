@@ -22,6 +22,18 @@
     --chat-input-color: white;
 }
 
+[data-theme="orange"] {
+    --chat-window-bg: rgba(255, 248, 243, 0.98);
+    --chat-window-border: rgba(255, 107, 53, 0.2);
+    --chat-bot-msg-bg: #ffe8d9;
+    --chat-bot-msg-color: #2d1810;
+    --chat-input-area-bg: rgba(255, 232, 217, 0.5);
+    --chat-input-area-border: rgba(255, 107, 53, 0.2);
+    --chat-input-bg: white;
+    --chat-input-border: rgba(255, 107, 53, 0.3);
+    --chat-input-color: #2d1810;
+}
+
 #chatbot-container {
     position: fixed;
     bottom: 2rem;
