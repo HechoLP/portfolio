@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="chatbot.css">
+  <link rel="stylesheet" href="kakao-map.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle-btn" aria-label="Toggle theme">
+    <svg class="theme-icon sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="theme-icon moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div id="hero-bg"></div>
+    <div class="hero-content container">
+      <h1>
+        <span class="text-gradient">CREATIVE</span><br>DEVELOPER
+      </h1>
+      <p style="font-size: 1.5rem; color: var(--hero-subtitle);">디지털 경험을 디자인합니다</p>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="reveal">소개</h2>
+      <div class="about-grid">
+        <div class="reveal">
+          <p>저는 디자인과 엔지니어링의 경계를 허무는 것을 좋아하는 열정적인 개발자입니다. 현대적인 웹 기술에 대한 깊은 이해를 바탕으로, 시각적으로 아름다우면서도 높은 성능을 자랑하는 몰입형 디지털
+            경험을 만듭니다.</p>
+          <p>웹이 어떻게 작동하는지에 대한 호기심으로 시작된 저의 여정은, 이제 복잡한 애플리케이션과 인터랙티브한 인터페이스를 구축하는 커리어로 발전했습니다.</p>
+        </div>
+        <div class="profile-card reveal">
+          <span style="color: var(--profile-placeholder);">[프로필 이미지]</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section" style="background-color: var(--skills-bg);">
+    <div class="container">
+      <h2 class="reveal">기술 스택</h2>
+      <div class="skills-grid">
+        <!-- Skill Items -->
+        <div class="skill-item reveal">
+          <div class="skill-info">
+            <span>React</span>
+            <span>90%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-width="90%"></div>
+          </div>
+        </div>
+        <div class="skill-item reveal">
+          <div class="skill-info">
+            <span>Three.js</span>
+            <span>75%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-width="75%"></div>
+          </div>
+        </div>
+        <div class="skill-item reveal">
+          <div class="skill-info">
+            <span>Tailwind CSS</span>
+            <span>95%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-width="95%"></div>
+          </div>
+        </div>
+        <div class="skill-item reveal">
+          <div class="skill-info">
+            <span>Node.js</span>
+            <span>80%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-width="80%"></div>
+          </div>
+        </div>
+        <div class="skill-item reveal">
+          <div class="skill-info">
+            <span>TypeScript</span>
+            <span>85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-width="85%"></div>
+          </div>
+        </div>
+        <div class="skill-item reveal">
+          <div class="skill-info">
+            <span>Next.js</span>
+            <span>85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-width="85%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="reveal">주요 프로젝트</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card reveal">
+          <div class="project-img">
+            <img src="images/portfolio.png" alt="3D 포트폴리오 미리보기">
+            <span class="project-label">Portfolio</span>
+          </div>
+          <div class="project-content">
+            <h3>몰입형 3D 포트폴리오</h3>
+            <p>인터랙티브한 3D 요소와 스크롤 애니메이션을 특징으로 하는 포트폴리오 사이트입니다.</p>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">Three.js</span>
+              <span class="tag">Framer Motion</span>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card reveal">
+          <div class="project-img">
+            <img src="images/dashboard.png" alt="이커머스 대시보드 미리보기">
+            <span class="project-label">Dashboard</span>
+          </div>
+          <div class="project-content">
+            <h3>이커머스 대시보드</h3>
+            <p>상품, 주문, 분석 데이터를 관리하기 위한 종합 대시보드입니다.</p>
+            <div class="tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Tailwind</span>
+              <span class="tag">Supabase</span>
+            </div>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="project-card reveal">
+          <div class="project-img">
+            <img src="images/chat-app.svg" alt="AI 채팅 애플리케이션 미리보기">
+            <span class="project-label">Chat App</span>
+          </div>
+          <div class="project-content">
+            <h3>AI 채팅 애플리케이션</h3>
+            <p>LLM을 기반으로 스트리밍 응답을 제공하는 실시간 채팅 애플리케이션입니다.</p>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">WebSocket</span>
+              <span class="tag">OpenAI API</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="section">
+    <div class="container">
+      <div class="map-layout">
+        <div class="map-info reveal">
+          <p class="eyebrow">Location</p>
+          <h2>위치 안내</h2>
+          <div class="location-card">
+            <span class="dot"></span>
+            <div>
+              <p class="location-label">주소</p>
+              <p>경상북도 포항시 북구 <br> 장성동 삼흥로 100-22 <br> 장성청구하이츠</p>
+            </div>
+          </div>
+        </div>
+        <div class="map-wrapper reveal">
+          <div class="map-frame">
+            <div class="map-gradient"></div>
+            <div class="map-dot dot-1"></div>
+            <div class="map-dot dot-2"></div>
+            <div id="map" style="width:800px;height:400px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Creative Developer. 모든 권리 보유.</p>
+  </footer>
+
+  <!-- Chatbot UI -->
+  <div id="chatbot-container">
+    <div id="chatbot-window">
+      <div class="chat-header">
+        <h3>AI Assistant</h3>
+        <button id="close-chat-btn" style="background:none; border:none; color:white; cursor:pointer;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div id="chat-messages" class="chat-messages">
+        <!-- Messages will appear here -->
+      </div>
+      <div class="chat-input-area">
+        <input type="text" id="chat-input" placeholder="메시지를 입력하세요...">
+        <button id="send-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <button id="chat-toggle-btn" class="chat-toggle-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+    </button>
+  </div>
+
+  <script type="text/javascript"
+    src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=0e23c2d3696931462e76c4cb28d38549&autoload=false"></script>
+  <script src="theme-toggle.js"></script>
+  <script src="kakao-map.js"></script>
+  <script src="chatbot.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
