@@ -15,9 +15,26 @@
 
   <!-- Theme Selector -->
   <div class="theme-selector">
-    <button class="theme-btn light" data-theme="light" aria-label="Light theme" title="라이트 테마"></button>
-    <button class="theme-btn dark" data-theme="dark" aria-label="Dark theme" title="다크 테마"></button>
-    <button class="theme-btn orange" data-theme="orange" aria-label="Orange theme" title="오렌지 테마"></button>
+    <button class="theme-toggle-main" aria-label="Toggle theme selector">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <circle cx="12" cy="12" r="3"></circle>
+        <line x1="12" y1="2" x2="12" y2="9"></line>
+        <line x1="12" y1="15" x2="12" y2="22"></line>
+        <line x1="4.93" y1="4.93" x2="9.88" y2="9.88"></line>
+        <line x1="14.12" y1="14.12" x2="19.07" y2="19.07"></line>
+        <line x1="2" y1="12" x2="9" y2="12"></line>
+        <line x1="15" y1="12" x2="22" y2="12"></line>
+        <line x1="4.93" y1="19.07" x2="9.88" y2="14.12"></line>
+        <line x1="14.12" y1="9.88" x2="19.07" y2="4.93"></line>
+      </svg>
+    </button>
+    <div class="theme-options">
+      <button class="theme-btn light" data-theme="light" aria-label="Light theme" title="라이트 테마"></button>
+      <button class="theme-btn dark" data-theme="dark" aria-label="Dark theme" title="다크 테마"></button>
+      <button class="theme-btn orange" data-theme="orange" aria-label="Orange theme" title="오렌지 테마"></button>
+    </div>
   </div>
 
   <!-- Hero Section -->

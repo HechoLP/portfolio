@@ -429,35 +429,97 @@ footer {
     top: 2rem;
     right: 2rem;
     z-index: 999;
-    display: flex;
-    gap: 0.5rem;
+}
+
+.theme-toggle-main {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
     background: var(--color-bg-lighter);
-    padding: 0.5rem;
-    border-radius: 50px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border: 2px solid var(--card-border);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.theme-toggle-main:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle-main svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--color-text);
+    transition: transform 0.3s ease;
+}
+
+.theme-selector.open .theme-toggle-main svg {
+    transform: rotate(180deg);
+}
+
+.theme-options {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-top: 70px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.theme-selector.open .theme-options {
+    opacity: 1;
+    visibility: visible;
 }
 
 .theme-btn {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     border: 2px solid transparent;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(-20px) scale(0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.theme-selector.open .theme-btn {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.theme-selector.open .theme-btn:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.theme-selector.open .theme-btn:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.theme-selector.open .theme-btn:nth-child(3) {
+    transition-delay: 0.15s;
 }
 
 .theme-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .theme-btn.active {
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(0, 168, 232, 0.2);
+    box-shadow: 0 0 0 3px rgba(0, 168, 232, 0.3), 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .theme-btn.light {
@@ -484,11 +546,24 @@ footer {
     .theme-selector {
         top: 1rem;
         right: 1rem;
-        padding: 0.4rem;
+    }
+    
+    .theme-toggle-main {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .theme-toggle-main svg {
+        width: 24px;
+        height: 24px;
     }
     
     .theme-btn {
-        width: 35px;
-        height: 35px;
+        width: 42px;
+        height: 42px;
+    }
+    
+    .theme-options {
+        padding-top: 62px;
     }
 }
